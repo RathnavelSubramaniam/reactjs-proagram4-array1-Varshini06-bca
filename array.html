@@ -1,11 +1,21 @@
-// Array of student objects
-const 
-students = [
-     }
-];
-
-
-
-// Process the array using destructuring
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <p id="result"></p>
+</body>
+<script>
+     const students=[{name:"Ram",age:20,grade:"A"},
+          {name:"Vijay",age:21,grade:"B"},
+          {name:"Ajith",age:19,grade:"A+"}
+     ];
+     const studentsInfo = students.map(({name,age,grade})=>{
+          return`<p>Name:${name} , Age: ${age} ,Grade: ${grade}<p>`;
+     });
+     document.getElementById("result").innerHTML = studentsInfo.join(" ");
+</script>
+</html>
